@@ -1,0 +1,154 @@
+import java.util.Scanner;
+
+ 
+public class MenuExample {
+	
+	public static void main(String[]args) {
+		runMenu();
+		
+	}
+	
+
+    public static void runMenu() {
+        printHeader();
+        boolean exit = false;
+		while (!exit) {
+            printMenu();
+            int choice = getMenuChoice();
+            performAction(choice);
+        }
+    }
+
+    private static void performAction(int choice) {
+    	switch(choice){
+    	
+    	}
+    
+		
+	}
+
+	private static void printHeader() {
+        System.out.println("+-----------------------------------+");
+        System.out.println("|Welcome to the console application|");
+        System.out.println("|        Console Application         |");
+        System.out.println("+-----------------------------------+");
+    }
+
+    private static void printMenu() {
+        displayHeader("Please make a selection");
+        System.out.println("1) Change Accuary ");
+        System.out.println("2) Equations");
+        System.out.println("3) Bubble Sort");
+        System.out.println("0) Exit");
+    }
+
+    private static void displayHeader(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static int getMenuChoice() {
+        Scanner d = new Scanner(System.in);
+        int choice = -1;
+        do {
+            System.out.print("Enter your choice: ");
+            try {
+                choice = Integer.parseInt(d.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid selection. Numbers only please.");
+            }
+            if (choice < 0 || choice > 4) {
+                System.out.println("Choice outside of range. Please chose again.");
+            }
+        } while (choice < 0 || choice > 4);
+        return choice;
+	
+}
+	
+}
+
+/* Equations /*
+
+public class Equations {
+	public int iinearEquation(int a, int b, int c ){
+        return (c - b) / a;
+	}
+}
+
+
+/*Bubble Sort/*
+
+import java.util.Scanner;
+ 
+class BubbleSort {
+  public static void main(String []args) {
+    int n, c, d, swap;
+    Scanner in = new Scanner(System.in);
+ 
+  //  System.out.println("Input number of integers to sort");
+   // n = in.nextInt();
+ 
+
+ 
+    System.out.println("Input student number:");
+    String StudentID = in.next();
+    n=StudentID.length();
+    int array[] = new int[StudentID.length()];
+    for (int i = 0; i < StudentID.length(); i++)
+    {
+        array[i] = StudentID.charAt(i) - '0';
+    }
+ 
+
+   
+    for (c = 0; c < ( n - 1 ); c++) {
+      for (d = 0; d < n - c - 1; d++) {
+        if (array[d] > array[d+1]) 
+        {
+          swap       = array[d];
+          array[d]   = array[d+1];
+          array[d+1] = swap;
+        }
+      }
+    }
+ 
+    System.out.println("Sorted list of numbers:");
+ 
+    for (c = 0; c < n; c++)
+      System.out.print(array[c]);
+  }
+}
+
+/* Option Method /*
+
+/*
+public class OptionMethod {
+	public class  Student {   
+		
+	     private static String dp="%.3f";
+	     public static void setdp(String decimialplace)
+	         {dp=decimialplace ; }
+	     public static String getdp()
+	        { return dp; }
+	}
+	/* Make an accuarcy method with a switch statement and in each case use setdp("%.12345f")/*
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
